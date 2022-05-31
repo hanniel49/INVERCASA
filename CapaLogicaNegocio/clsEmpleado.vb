@@ -17,6 +17,33 @@ Public Class clsEmpleado
     Private m_SalarioBase As Double
     Private m_Direccion As String
 
+    Public Property IdEmpleado As String
+        Get
+            Return m_IdEmp
+        End Get
+        Set(ByVal value As String)
+            m_IdEmp = value
+        End Set
+    End Property
+
+    Public Property Nombres As String
+        Get
+            Return m_Nombre
+        End Get
+        Set(ByVal value As String)
+            m_Nombre = value
+        End Set
+    End Property
+
+    Public Property TipoDni As String
+        Get
+            Return m_TipoDni
+        End Get
+        Set(ByVal value As String)
+            m_TipoDni = value
+        End Set
+    End Property
+
     Public Property Dni As String
         Get
             Return m_Dni
@@ -26,13 +53,21 @@ Public Class clsEmpleado
         End Set
     End Property
 
-
-    Public Property Nombres As String
+    Public Property FechaIngreso As String
         Get
-            Return m_Nombre
+            Return m_FechaIngreso
         End Get
         Set(ByVal value As String)
-            m_Nombre = value
+            m_FechaIngreso = value
+        End Set
+    End Property
+
+    Public Property SalarioBase As String
+        Get
+            Return m_SalarioBase
+        End Get
+        Set(ByVal value As String)
+            m_SalarioBase = value
         End Set
     End Property
 
@@ -62,14 +97,14 @@ Public Class clsEmpleado
 
         Try
             lst.Add(New clsParametro("@Nombres", m_Nombre))
-            lst.Add(New clsParametro("@TipoDni", m_TipoDni))
-            lst.Add(New clsParametro("@Dni", m_Dni))
-            lst.Add(New clsParametro("@FechaIngreso", m_FechaIngreso))
-            lst.Add(New clsParametro("@SalarioBase", m_SalarioBase))
-            lst.Add(New clsParametro("@Direccion", m_Direccion))
+            lst.Add(New clsParametro("@TIPO_DNI", m_TipoDni))
+            lst.Add(New clsParametro("@DNI", m_Dni))
+            lst.Add(New clsParametro("@FECHA_INGRESO", m_FechaIngreso))
+            lst.Add(New clsParametro("@SALARIO_BASE", m_SalarioBase))
+            lst.Add(New clsParametro("@DIRECCION", m_Direccion))
             lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50))
-            M.EjecutarSP("RegistrarCliente", lst)
-            Mensaje = lst(5).Valor.ToString()
+            M.EjecutarSP("RegistrarEmpleado", lst)
+            Mensaje = lst(6).Valor.ToString()
         Catch ex As Exception
             Throw ex
         End Try
@@ -82,16 +117,16 @@ Public Class clsEmpleado
         Dim Mensaje As String = ""
 
         Try
-            lst.Add(New clsParametro("@IdEmpleado", m_IdEmp))
+            lst.Add(New clsParametro("@ID_EMPLEADO", m_IdEmp))
             lst.Add(New clsParametro("@Nombres", m_Nombre))
-            lst.Add(New clsParametro("@TipoDni", m_TipoDni))
+            lst.Add(New clsParametro("@TIPO_DNI", m_TipoDni))
             lst.Add(New clsParametro("@Dni", m_Dni))
-            lst.Add(New clsParametro("@FechaIngreso", m_FechaIngreso))
-            lst.Add(New clsParametro("@SalarioBase", m_SalarioBase))
+            lst.Add(New clsParametro("@Fecha_Ingreso", m_FechaIngreso))
+            lst.Add(New clsParametro("@Salario_Base", m_SalarioBase))
             lst.Add(New clsParametro("@Direccion", m_Direccion))
             lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50))
-            M.EjecutarSP("ActualizarCliente", lst)
-            Mensaje = lst(5).Valor.ToString()
+            M.EjecutarSP("ActualizarEmpleado", lst)
+            Mensaje = lst(7).Valor.ToString()
         Catch ex As Exception
             Throw ex
         End Try
@@ -99,21 +134,15 @@ Public Class clsEmpleado
         Return Mensaje
     End Function
 
-    Public Function EliminarCliente() As String
+    Public Function EliminarEmpleado() As String
         Dim lst As List(Of clsParametro) = New List(Of clsParametro)()
         Dim Mensaje As String = ""
 
         Try
-            lst.Add(New clsParametro("@IdEmpleado", m_IdEmp))
-            lst.Add(New clsParametro("@Nombres", m_Nombre))
-            lst.Add(New clsParametro("@TipoDni", m_TipoDni))
-            lst.Add(New clsParametro("@Dni", m_Dni))
-            lst.Add(New clsParametro("@FechaIngreso", m_FechaIngreso))
-            lst.Add(New clsParametro("@SalarioBase", m_SalarioBase))
-            lst.Add(New clsParametro("@Direccion", m_Direccion))
+            lst.Add(New clsParametro("@Id_Empleado", m_IdEmp))
             lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50))
-            M.EjecutarSP("ActualizarCliente", lst)
-            Mensaje = lst(5).Valor.ToString()
+            M.EjecutarSP("EliminarEmpleado", lst)
+            Mensaje = lst(1).Valor.ToString()
         Catch ex As Exception
             Throw ex
         End Try

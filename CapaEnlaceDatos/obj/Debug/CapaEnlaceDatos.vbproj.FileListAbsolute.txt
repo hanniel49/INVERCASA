@@ -7,4 +7,3 @@ C:\Users\fguzman\OneDrive - MACESA\Documentos\Desarrollo\github\INVERCASA\CapaEn
 C:\Users\fguzman\OneDrive - MACESA\Documentos\Desarrollo\github\INVERCASA\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.dll
 C:\Users\fguzman\OneDrive - MACESA\Documentos\Desarrollo\github\INVERCASA\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.xml
 C:\Users\fguzman\OneDrive - MACESA\Documentos\Desarrollo\github\INVERCASA\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.pdb
-C:\Users\fguzman\OneDrive - MACESA\Documentos\Desarrollo\github\INVERCASA\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.vbproj.AssemblyReference.cache

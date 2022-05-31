@@ -33,11 +33,11 @@ Partial Class FrmRegistroEmpleados
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtIdentificacion = New System.Windows.Forms.TextBox()
-        Me.txtFechaIngreso = New System.Windows.Forms.TextBox()
         Me.txtSalarioBase = New System.Windows.Forms.TextBox()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.cbTipoDni = New System.Windows.Forms.ComboBox()
+        Me.dtpFechaIngreso = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'Label1
@@ -107,6 +107,7 @@ Partial Class FrmRegistroEmpleados
         '
         Me.txtId.Location = New System.Drawing.Point(21, 34)
         Me.txtId.Name = "txtId"
+        Me.txtId.ReadOnly = True
         Me.txtId.Size = New System.Drawing.Size(205, 20)
         Me.txtId.TabIndex = 7
         '
@@ -123,13 +124,6 @@ Partial Class FrmRegistroEmpleados
         Me.txtIdentificacion.Name = "txtIdentificacion"
         Me.txtIdentificacion.Size = New System.Drawing.Size(205, 20)
         Me.txtIdentificacion.TabIndex = 10
-        '
-        'txtFechaIngreso
-        '
-        Me.txtFechaIngreso.Location = New System.Drawing.Point(21, 191)
-        Me.txtFechaIngreso.Name = "txtFechaIngreso"
-        Me.txtFechaIngreso.Size = New System.Drawing.Size(205, 20)
-        Me.txtFechaIngreso.TabIndex = 11
         '
         'txtSalarioBase
         '
@@ -158,21 +152,29 @@ Partial Class FrmRegistroEmpleados
         'cbTipoDni
         '
         Me.cbTipoDni.FormattingEnabled = True
+        Me.cbTipoDni.Items.AddRange(New Object() {"CEDULA", "PASAPORTE", "LICENCIA"})
         Me.cbTipoDni.Location = New System.Drawing.Point(21, 112)
         Me.cbTipoDni.Name = "cbTipoDni"
         Me.cbTipoDni.Size = New System.Drawing.Size(205, 21)
         Me.cbTipoDni.TabIndex = 15
+        '
+        'dtpFechaIngreso
+        '
+        Me.dtpFechaIngreso.Location = New System.Drawing.Point(21, 191)
+        Me.dtpFechaIngreso.Name = "dtpFechaIngreso"
+        Me.dtpFechaIngreso.Size = New System.Drawing.Size(205, 20)
+        Me.dtpFechaIngreso.TabIndex = 16
         '
         'FrmRegistroEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(290, 361)
+        Me.Controls.Add(Me.dtpFechaIngreso)
         Me.Controls.Add(Me.cbTipoDni)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.txtDireccion)
         Me.Controls.Add(Me.txtSalarioBase)
-        Me.Controls.Add(Me.txtFechaIngreso)
         Me.Controls.Add(Me.txtIdentificacion)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.txtId)
@@ -201,9 +203,9 @@ Partial Class FrmRegistroEmpleados
     Friend WithEvents txtId As TextBox
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents txtIdentificacion As TextBox
-    Friend WithEvents txtFechaIngreso As TextBox
     Friend WithEvents txtSalarioBase As TextBox
     Friend WithEvents txtDireccion As TextBox
     Friend WithEvents btnGuardar As Button
     Friend WithEvents cbTipoDni As ComboBox
+    Friend WithEvents dtpFechaIngreso As DateTimePicker
 End Class

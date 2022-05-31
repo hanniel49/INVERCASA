@@ -51,39 +51,56 @@ As Begin
    End
 Go
 
-Create Proc RegistrarCliente
-(@DNI char(8),
-@Apellidos Varchar(50),
-@Nombres Varchar(50),
-@Direccion Varchar(100),
-@Telefono Varchar(12),
-@Mensaje Varchar(50) Output
+Create Proc RegistrarEmpleado
+(@NOMBRES Varchar(50),
+ @TIPO_DNI Varchar(20),
+ @DNI Varchar(50),
+ @FECHA_INGRESO date,
+ @SALARIO_BASE MONEY,
+ @DIRECCION VARCHAR(500),
+ @Mensaje Varchar(50) Output
 )
 As Begin
-	If(Exists(Select * From Cliente Where Dni=@DNI))
+	If(Exists(Select * From TBL_EMPLEADOS Where Dni=@DNI))
 		Set @Mensaje='Los Datos del Cliente ya Existen.'
 	Else Begin
-		Insert Cliente Values(@DNI,@Apellidos,@Nombres,@Direccion,@Telefono)
+		Insert TBL_EMPLEADOS Values(@NOMBRES,@TIPO_DNI,@DNI,@FECHA_INGRESO,@SALARIO_BASE,@DIRECCION)
 		Set @Mensaje='Registrado Correctamente.'
 		End
 	End
 Go
 
-Create Proc ActualizarCliente
-(@DNI Char(8),
-@Apellidos Varchar(50),
-@Nombres Varchar(50),
-@Direccion Varchar(100),
-@Telefono Varchar(12),
-@Mensaje Varchar(50) Output
+Create Proc ActualizarEmpleado
+(@ID_EMPLEADO Integer,
+ @NOMBRES Varchar(100),
+ @TIPO_DNI Varchar(20),
+ @DNI Varchar(50),
+ @FECHA_INGRESO date,
+ @SALARIO_BASE MONEY,
+ @DIRECCION VARCHAR(500),
+ @Mensaje Varchar(50) Output
 )
 As Begin
-	If(Not Exists(Select * From Cliente Where Dni=@DNI))
-		Set @Mensaje='Los Datos del Cliente no Existen.'
+	If(Not Exists(Select * From TBL_EMPLEADOS Where ID_EMPLEADO=@ID_EMPLEADO))
+		Set @Mensaje='Los Datos del Empleado no Existen.'
 	Else Begin
-		Update Cliente Set Apellidos=@Apellidos,Nombres=@Nombres,Direccion=@Direccion,Telefono=@Telefono 
-		Where DNI=@DNI
+		Update TBL_EMPLEADOS Set NOMBRE=@NOMBRES,TIPO_DNI=@TIPO_DNI,DNI=@DNI,FECHA_INGRESO=@FECHA_INGRESO,SALARIO_BASE=@SALARIO_BASE,DIRECCION=@DIRECCION 
+		Where ID_EMPLEADO=@ID_EMPLEADO
 		Set @Mensaje='Registro Actualizado Correctamente.'
+		End
+	End
+Go
+
+Create Proc EliminarEmpleado
+(@ID_EMPLEADO Integer,
+ @Mensaje Varchar(50) Output
+)
+As Begin
+	If(Not Exists(Select * From TBL_EMPLEADOS Where ID_EMPLEADO=@ID_EMPLEADO))
+		Set @Mensaje='Los Datos del Empleado no Existen.'
+	Else Begin
+		DELETE FROM TBL_EMPLEADOS Where ID_EMPLEADO=@ID_EMPLEADO
+		Set @Mensaje='Registro Eliminado.'
 		End
 	End
 Go

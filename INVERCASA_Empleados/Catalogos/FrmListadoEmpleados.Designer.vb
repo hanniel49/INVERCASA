@@ -24,10 +24,6 @@ Partial Class FrmListadoEmpleados
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmListadoEmpleados))
         Me.dgvEmpleados = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnAgregar = New System.Windows.Forms.Button()
-        Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.ID_EMPLEADO = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NOMBRE = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TIPO_DNI = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -35,6 +31,10 @@ Partial Class FrmListadoEmpleados
         Me.FECHA_INGRESO = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SALARIO_BASE = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DIRECCION = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         CType(Me.dgvEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -47,6 +47,41 @@ Partial Class FrmListadoEmpleados
         Me.dgvEmpleados.Name = "dgvEmpleados"
         Me.dgvEmpleados.Size = New System.Drawing.Size(658, 330)
         Me.dgvEmpleados.TabIndex = 0
+        '
+        'ID_EMPLEADO
+        '
+        Me.ID_EMPLEADO.HeaderText = "ID"
+        Me.ID_EMPLEADO.Name = "ID_EMPLEADO"
+        '
+        'NOMBRE
+        '
+        Me.NOMBRE.HeaderText = "NOMBRE"
+        Me.NOMBRE.Name = "NOMBRE"
+        '
+        'TIPO_DNI
+        '
+        Me.TIPO_DNI.HeaderText = "TIPO DNI"
+        Me.TIPO_DNI.Name = "TIPO_DNI"
+        '
+        'DNI
+        '
+        Me.DNI.HeaderText = "DNI"
+        Me.DNI.Name = "DNI"
+        '
+        'FECHA_INGRESO
+        '
+        Me.FECHA_INGRESO.HeaderText = "FECHA INGRESO"
+        Me.FECHA_INGRESO.Name = "FECHA_INGRESO"
+        '
+        'SALARIO_BASE
+        '
+        Me.SALARIO_BASE.HeaderText = "SALARIO BASE"
+        Me.SALARIO_BASE.Name = "SALARIO_BASE"
+        '
+        'DIRECCION
+        '
+        Me.DIRECCION.HeaderText = "DIRECCION"
+        Me.DIRECCION.Name = "DIRECCION"
         '
         'Label1
         '
@@ -84,41 +119,6 @@ Partial Class FrmListadoEmpleados
         Me.btnEliminar.TabIndex = 4
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
-        '
-        'ID_EMPLEADO
-        '
-        Me.ID_EMPLEADO.HeaderText = "ID"
-        Me.ID_EMPLEADO.Name = "ID_EMPLEADO"
-        '
-        'NOMBRE
-        '
-        Me.NOMBRE.HeaderText = "NOMBRE"
-        Me.NOMBRE.Name = "NOMBRE"
-        '
-        'TIPO_DNI
-        '
-        Me.TIPO_DNI.HeaderText = "TIPO DNI"
-        Me.TIPO_DNI.Name = "TIPO_DNI"
-        '
-        'DNI
-        '
-        Me.DNI.HeaderText = "DNI"
-        Me.DNI.Name = "DNI"
-        '
-        'FECHA_INGRESO
-        '
-        Me.FECHA_INGRESO.HeaderText = "FECHA INGRESO"
-        Me.FECHA_INGRESO.Name = "FECHA_INGRESO"
-        '
-        'SALARIO_BASE
-        '
-        Me.SALARIO_BASE.HeaderText = "SALARIO BASE"
-        Me.SALARIO_BASE.Name = "SALARIO_BASE"
-        '
-        'DIRECCION
-        '
-        Me.DIRECCION.HeaderText = "DIRECCION"
-        Me.DIRECCION.Name = "DIRECCION"
         '
         'FrmListadoEmpleados
         '
