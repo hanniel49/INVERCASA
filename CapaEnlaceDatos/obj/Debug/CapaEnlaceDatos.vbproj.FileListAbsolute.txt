@@ -1,0 +1,10 @@
+C:\Users\fguzman\OneDrive - MACESA\Documentos\Desarrollo\github\INVERCASA\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.Resources.resources
+C:\Users\fguzman\OneDrive - MACESA\Documentos\Desarrollo\github\INVERCASA\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.vbproj.GenerateResource.cache
+C:\Users\fguzman\OneDrive - MACESA\Documentos\Desarrollo\github\INVERCASA\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.vbproj.CoreCompileInputs.cache
+C:\Users\fguzman\OneDrive - MACESA\Documentos\Desarrollo\github\INVERCASA\CapaEnlaceDatos\bin\Debug\CapaEnlaceDatos.dll
+C:\Users\fguzman\OneDrive - MACESA\Documentos\Desarrollo\github\INVERCASA\CapaEnlaceDatos\bin\Debug\CapaEnlaceDatos.pdb
+C:\Users\fguzman\OneDrive - MACESA\Documentos\Desarrollo\github\INVERCASA\CapaEnlaceDatos\bin\Debug\CapaEnlaceDatos.xml
+C:\Users\fguzman\OneDrive - MACESA\Documentos\Desarrollo\github\INVERCASA\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.dll
+C:\Users\fguzman\OneDrive - MACESA\Documentos\Desarrollo\github\INVERCASA\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.xml
+C:\Users\fguzman\OneDrive - MACESA\Documentos\Desarrollo\github\INVERCASA\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.pdb
+C:\Users\fguzman\OneDrive - MACESA\Documentos\Desarrollo\github\INVERCASA\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.vbproj.AssemblyReference.cache
